@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewBag.Titel = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    @foreach (var item in Model.Students)
+    {
+        <h2>@item.FirstName</h2>
+    }
+
+    @foreach (var item in Model.Subjects)
+        {
+            <h2>@item.Titel</h2>
+        }
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
